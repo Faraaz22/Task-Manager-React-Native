@@ -43,7 +43,7 @@ cp apps/mobile/.env.example apps/mobile/.env
 Edit `apps/mobile/.env`:
 
 ```
-EXPO_PUBLIC_API_URL=http://<your-machine-ip>:4000
+EXPO_PUBLIC_API_URL=http://localhost:4000
 ```
 
 > When running through Expo Go on a physical phone, use your computer's LAN IP (e.g. `http://192.168.1.5:4000`). `localhost` resolves to the phone itself.
