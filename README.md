@@ -2,7 +2,6 @@
 
 Monorepo with an Express + MongoDB backend (`apps/api`) and an Expo React Native app (`apps/mobile`).
 
-For architecture, schema, design rationale, and interview talking points see **[ARCHITECTURE.md](./ARCHITECTURE.md)**.
 
 ## Prerequisites
 

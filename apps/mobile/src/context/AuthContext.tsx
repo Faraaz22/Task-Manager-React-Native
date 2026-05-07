@@ -58,6 +58,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await applySession(res);
       },
       logout: async () => {
+        try {
+          await authApi.logout();
+        } catch {
+          // proceed with local cleanup even if server call fails
+        }
         await tokenStorage.remove();
         setToken(null);
         setUser(null);

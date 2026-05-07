@@ -3,6 +3,7 @@ import { env } from "../config/env";
 
 export interface JwtPayload {
   sub: string;
+  exp?: number;
 }
 
 export function signToken(payload: JwtPayload): string {
@@ -16,5 +17,5 @@ export function verifyToken(token: string): JwtPayload {
   if (typeof decoded === "string" || !decoded.sub) {
     throw new Error("Invalid token payload");
   }
-  return { sub: String(decoded.sub) };
+  return { sub: String(decoded.sub), exp: decoded.exp };
 }
